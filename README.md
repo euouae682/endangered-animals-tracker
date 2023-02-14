@@ -1,2 +1,2 @@
-# endangered-animals-tracker
-a tracker for endangered animals
+# Endangered Animal Tracker
+A Good Tracker For Endangered Animals
