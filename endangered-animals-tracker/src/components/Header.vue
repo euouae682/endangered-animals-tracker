@@ -1,63 +1,57 @@
 <script setup></script>
 
 <template>
-  <img
-    src="../assets/logo-placeholder-image.png"
-    alt="Logo"
-    width="50"
-    height="50"
-  />
+  <div class="header">
+    <img
+      src="../assets/logo-placeholder-image.png"
+      alt="Logo"
+      width="50"
+      height="50"
+    />
 
-  <h1>Endangered Animals Tracker</h1>
+    <span>Endangered Animals Tracker</span>
 
-  <nav>
-    <ul>
-      <li><a>Settings</a></li>
-      <li><a>About</a></li>
-    </ul>
-  </nav>
+    <nav>
+      <a href="#">Settings</a>
+      <a href="#">About</a>
+    </nav>
+  </div>
 </template>
 
 <style scoped>
-* {
-  margin: 0;
-  padding: 0;
+/* Logo & Title */
+.header {
+  display: flex;
+  align-items: center;
+
+  overflow: hidden;
 }
 
-/* Logo */
 img {
-  margin-right: 15px;
+  padding: 2px 10px;
 }
 
-/* Heading */
-h1 {
-  display: inline-block;
-  margin: 10px;
+span {
+  font-size: 24px;
+  font-weight: bold;
 }
 
 /* Navigation */
-ul {
-  list-style-type: none;
-
-  height: 100%;
-  float: right;
+nav {
+  margin-left: auto;
+  order: 2;
 }
 
-li {
-  text-align: center;
-
-  height: 100%;
-  float: left;
-
-  margin-left: 10px;
-}
-
-a {
+a:any-link {
   font-size: 20px;
+  text-decoration: none;
 
-  color: black;
-  transition: color 0.2s;
+  color: #000;
 
-  padding: 25px;
+  padding: 100% 25px;
+}
+
+a:hover {
+  background-color: #70c3ed;
 }
 </style>

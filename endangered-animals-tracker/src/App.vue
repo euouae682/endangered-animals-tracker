@@ -11,15 +11,20 @@ import Header from "./components/Header.vue";
 </template>
 
 <style scoped>
+* {
+  margin: 0;
+  padding: 0;
+}
+
+/* Page Sections */
 body {
-  border: 1px solid black;
-  width: 1000px;
+  font-family: sans-serif;
+
+  color: #444;
+  border-top: 10px solid #70c3ed;
 }
 
 .main-header {
-  border: 1px solid black;
-  width: 100%;
-
-  background-color: aquamarine;
+  background-color: rgba(112, 195, 237, 0.5);
 }
 </style>
