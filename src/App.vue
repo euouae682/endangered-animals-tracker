@@ -1,5 +1,6 @@
 <script setup>
 import Header from "./components/Header.vue";
+import Aside from "./components/Aside.vue";
 </script>
 
 <template>
@@ -7,6 +8,10 @@ import Header from "./components/Header.vue";
     <header class="main-header">
       <Header />
     </header>
+
+    <div class="aside">
+      <Aside />
+    </div>
   </body>
 </template>
 
@@ -26,5 +31,9 @@ body {
 
 .main-header {
   background-color: rgba(112, 195, 237, 0.5);
+}
+
+.aside {
+
 }
 </style>
