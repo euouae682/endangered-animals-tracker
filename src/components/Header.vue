@@ -19,14 +19,18 @@
 </template>
 
 <style scoped>
-/* Logo & Title */
+/* Container */
 .header {
+  border-top: 10px solid #70c3ed;
+  background-color: rgba(112, 195, 237, 0.5);
+
   display: flex;
   align-items: center;
 
   overflow: hidden;
 }
 
+/* Logo & Title */
 img {
   padding: 2px 10px;
 }
