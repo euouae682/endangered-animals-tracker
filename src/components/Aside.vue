@@ -8,6 +8,11 @@
 
     <button type="button" class="collapsible-button">Taxonomy</button>
     <div class="collapsible">
+      <!-- <form>
+        <input type="checkbox" v-for="item in objectItems" id={{ item }} />a
+        <label v-for="item in objectItems" for={{ item }}> {{ item }} <label />
+      </form> -->
+
       <form>
         <input type="checkbox" id="taxonomy-animal" name="taxonomy-animal" />
         <label for="taxonomy-animal">Animal</label><br />
