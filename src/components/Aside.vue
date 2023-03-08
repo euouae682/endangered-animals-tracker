@@ -71,15 +71,15 @@
 </template>
 
 <style scoped>
-/* Container */
+/* CONTAINER */
 .container {
   text-align: center;
   background-color: rgba(255, 0, 0, 0.273);
 
-  width: 25%;
   padding: 20px 0;
 }
 
+/* COLLAPSIBLES */
 .collapsible-button {
   width: 95%;
 }
@@ -89,6 +89,7 @@
   margin-left: 10%;
 }
 
+/* LINE */
 .line {
   border-bottom: 5px solid hsla(0, 0%, 47%, 0.5);
   border-radius: 20px;
@@ -97,7 +98,7 @@
   width: 95%;
 }
 
-/* Search Bar */
+/* SEARCH BAR */
 .search-bar {
   font-size: 20px;
 

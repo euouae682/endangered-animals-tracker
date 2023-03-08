@@ -19,31 +19,30 @@
 </template>
 
 <style scoped>
-/* Container */
+/* CONTAINER */
 .header {
   border-top: 10px solid #70c3ed;
   background-color: rgba(112, 195, 237, 0.5);
 
   display: flex;
   align-items: center;
-
-  overflow: hidden;
 }
 
-/* Logo & Title */
+/* LOGO */
 img {
-  padding: 2px 10px;
+  margin: 2px 10px;
 }
 
+/* TITLE */
 span {
-  font-size: 24px;
+  font-size: 26px;
   font-weight: bold;
 }
 
-/* Navigation */
+/* NAVIGATION */
 nav {
+  order: 0;
   margin-left: auto;
-  order: 2;
 }
 
 a:any-link {
@@ -52,7 +51,8 @@ a:any-link {
 
   color: #000;
 
-  padding: 100% 25px;
+  /* height: 100%; */
+  padding: 16px 25px;
 }
 
 a:hover {

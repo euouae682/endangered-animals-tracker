@@ -7,9 +7,18 @@ import Footer from "./components/Footer.vue";
 
 <template>
   <Header class="header" />
-  <Aside class="aside" />
-  <Article class="article" />
+
+  <div class="container">
+    <Aside class="aside" />
+    <Article class="article" />
+  </div>
+
   <Footer class="footer" />
 </template>
 
-<style scoped></style>
+<style scoped>
+/* LAYOUT */
+.aside {
+  width: 25%;
+}
+</style>
