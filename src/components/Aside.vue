@@ -79,8 +79,7 @@
 /* CONTAINER */
 .container {
   text-align: center;
-  background-color: rgba(255, 0, 0, 0.273);
-
+  background-color: #ddd;
   padding: 20px 0;
 }
 

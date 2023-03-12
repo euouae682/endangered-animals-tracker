@@ -1,13 +1,14 @@
 <script setup></script>
 
 <template>
-  <div class="footer">
-    <p>Footer</p>
+  <div class="copyright">
+    <p>Copyright &#169; 2023</p>
   </div>
 </template>
 
 <style scoped>
-.footer {
-  background-color: rgba(0, 255, 255, 0.5);
+.copyright {
+  background-color: #eee;
+  padding-left: 5px;
 }
 </style>

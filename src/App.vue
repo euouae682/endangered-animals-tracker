@@ -23,10 +23,10 @@ import Footer from "./components/Footer.vue";
 }
 
 .aside {
-  width: 20%;
+  flex: 0 0 20%;
 }
 
 .article {
-  width: 80%;
+  flex: 1;
 }
 </style>

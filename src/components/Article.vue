@@ -12,8 +12,6 @@ import AnimalProfile from "./AnimalProfile.vue";
 
 <style scoped>
 .article {
-  background-color: hsla(120, 100%, 50%, 0.5);
-
   display: flex;
   align-items: center;
   flex-direction: column;

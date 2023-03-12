@@ -1,42 +1,81 @@
 <script setup></script>
 
 <template>
-  <div class="container">
-    <header class="title">
-      <img
-        src="../assets/logo-placeholder-image.png"
-        alt="Logo"
-        width="50"
-        height="50"
-        class="animal-image"
-      />
+  <div class="animal-box">
+    <img
+      src="../assets/demo-axolotl.jpg"
+      alt="Logo"
+      width="200"
+      height="200"
+      class="animal-image"
+    />
 
-      <span class="common-name">Animal Name</span>
-      <span class="scientific-name">(Scientific Name)</span>
-    </header>
+    <div class="basic-information">
+      <header class="animal-title">
+        <span class="common-name">Axolotl</span>
+        <span class="scientific-name">(Ambystoma mexicanum)</span>
+      </header>
 
-    <article>
-      <p>Status</p>
-      <p>Stability</p>
-    </article>
+      <div class="more-information">
+        <div class="info-box threats">
+          <h3>Threats</h3>
+          <ul>
+            <li>Residential & commercial development</li>
+            <li>Pollution</li>
+          </ul>
+        </div>
+
+        <div class="info-box habitat">
+          <h3>Habitat</h3>
+          <ul>
+            <li>Wetlands</li>
+            <li>Artificial/Aquatic & Marine</li>
+          </ul>
+        </div>
+
+        <div class="info-box countries">
+          <h3>Countries</h3>
+          <ul>
+            <li>Mexico</li>
+          </ul>
+        </div>
+      </div>
+
+      <p class="additional-info">Additional Information</p>
+    </div>
+
+    <div class="status">Critically Endangered</div>
   </div>
 </template>
 
 <style scoped>
 /* CONTAINER */
-.container {
+.animal-box {
+  background-color: #eee;
   border: 2px solid #000;
   border-radius: 5px;
-}
 
-/* TITLE */
-.title {
   display: flex;
-  align-items: center;
+  justify-content: center;
 }
 
+.basic-information {
+  display: flex;
+  flex-direction: column;
+  flex: 1 0 0;
+  gap: 20px;
+}
+
+/* IMAGE */
 .animal-image {
   margin-right: 10px;
+}
+
+/* ANIMAL TITLE */
+.animal-title {
+  font-size: 28px;
+  color: #70c3ed;
+  margin-top: 5px;
 }
 
 .common-name {
@@ -44,7 +83,52 @@
   margin-right: 10px;
 }
 
-.scientific-name {
-  color: #777;
+/* INFORMATION */
+.more-information {
+  font-size: 24px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.info-box {
+  flex: 1 1 0px;
+  margin: 10px;
+}
+
+h3 {
+  font-size: 20px;
+  text-align: center;
+  color: #70c3ed;
+}
+
+li {
+  font-size: 16px;
+  font-style: italic;
+  text-align: center;
+  list-style-type: none;
+
+  margin-bottom: 5px;
+}
+
+.additional-info {
+  text-align: center;
+  color: #70c3ed;
+}
+
+/* STATUS */
+.status {
+  font-size: 20px;
+  text-align: center;
+  writing-mode: vertical-rl;
+  word-spacing: 100vw;
+
+  color: #fff;
+  background-color: #e03531;
+  /* background-color: #f0bd27;
+  background-color: #51b364; */
+
+  height: 200px;
+  padding: 0 20px;
+  margin-left: auto;
 }
 </style>
