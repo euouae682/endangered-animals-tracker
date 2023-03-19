@@ -7,6 +7,7 @@
     <div class="line"></div>
 
     <button type="button" class="collapsible-button">Taxonomy</button>
+
     <div class="collapsible">
       <!-- <form>
         <input type="checkbox" v-for="item in objectItems" id={{ item }} />a
