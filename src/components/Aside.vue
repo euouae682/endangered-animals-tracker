@@ -1,4 +1,7 @@
-<script setup></script>
+<script setup>
+const objectItems = [ "Animal", "Plant", "Fungi" ]
+const regions = ["Africa", "Antarctica", "Asia", "Europe", "North America", "Oceania", "South America"]
+</script>
 
 <template>
   <div class="container">
@@ -8,20 +11,11 @@
 
     <button type="button" class="collapsible-button">Taxonomy</button>
     <div class="collapsible">
-      <!-- <form>
-        <input type="checkbox" v-for="item in objectItems" id={{ item }} />a
-        <label v-for="item in objectItems" for={{ item }}> {{ item }} <label />
-      </form> -->
-
       <form>
-        <input type="checkbox" id="taxonomy-animal" name="taxonomy-animal" />
-        <label for="taxonomy-animal">Animal</label><br />
-
-        <input type="checkbox" id="taxonomy-plant" name="taxonomy-plant" />
-        <label for="taxonomy-plant">Plant</label><br />
-
-        <input type="checkbox" id="taxonomy-fungi" name="taxonomy-fungi" />
-        <label for="taxonomy-fungi">Fungi</label><br />
+        <div v-for="item in objectItems">
+          <input type="checkbox" :id="'taxonomy-' + item.toLowerCase()" :name="'taxonomy-' + item.toLowerCase()">
+          <label :for="'taxonomy-' + item.toLowerCase()"> {{ item }} </label><br>     
+        </div>
       </form>
     </div>
 
@@ -30,38 +24,10 @@
     <button type="button" class="collapsible-button">Region</button>
     <div class="collapsible">
       <form>
-        <input type="checkbox" id="region-africa" name="region-africa" />
-        <label for="region-africa">Africa</label><br />
-
-        <input
-          type="checkbox"
-          id="region-antarctica"
-          name="region-antarctica"
-        />
-        <label for="region-antarctica">Antarctica</label><br />
-
-        <input type="checkbox" id="region-asia" name="region-asia" />
-        <label for="region-asia">Asia</label><br />
-
-        <input type="checkbox" id="region-europe" name="region-europe" />
-        <label for="region-europe">Europe</label><br />
-
-        <input
-          type="checkbox"
-          id="region-north-america"
-          name="region-north-america"
-        />
-        <label for="region-north-america">North America</label><br />
-
-        <input type="checkbox" id="region-oceania" name="region-oceania" />
-        <label for="region-oceania">Oceania</label><br />
-
-        <input
-          type="checkbox"
-          id="region-south-america"
-          name="region-south-america"
-        />
-        <label for="region-south-america">South America</label><br />
+        <div v-for="region in regions">
+          <input type="checkbox" :id="'region-' + region.toLowerCase()" :name="'region-' + region.toLowerCase()">
+          <label :for="'region-' + region.toLowerCase()"> {{ region }} </label>
+        </div>
       </form>
     </div>
 
