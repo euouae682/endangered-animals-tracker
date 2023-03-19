@@ -1,6 +1,18 @@
 <script setup>
+import { ref } from 'vue'
 const objectItems = [ "Animal", "Plant", "Fungi" ]
 const regions = ["Africa", "Antarctica", "Asia", "Europe", "North America", "Oceania", "South America"]
+
+const display_taxonomy = ref(true)
+const display_region = ref(true)
+
+function toggle_taxonomy(event) {
+  display_taxonomy.value = !display_taxonomy.value
+}
+
+function toggle_region(event) {
+  display_region.value = !display_region.value
+}
 </script>
 
 <template>
@@ -9,8 +21,8 @@ const regions = ["Africa", "Antarctica", "Asia", "Europe", "North America", "Oce
 
     <div class="line"></div>
 
-    <button type="button" class="collapsible-button">Taxonomy</button>
-    <div class="collapsible">
+    <button @click="toggle_taxonomy" type="button" class="collapsible-button">Taxonomy</button>
+    <div v-if="display_taxonomy" class="collapsible" id="collapse-taxonomy">
       <form>
         <div v-for="item in objectItems">
           <input type="checkbox" :id="'taxonomy-' + item.toLowerCase()" :name="'taxonomy-' + item.toLowerCase()">
@@ -21,8 +33,8 @@ const regions = ["Africa", "Antarctica", "Asia", "Europe", "North America", "Oce
 
     <div class="line"></div>
 
-    <button type="button" class="collapsible-button">Region</button>
-    <div class="collapsible">
+    <button @click="toggle_region" type="button" class="collapsible-button">Region</button>
+    <div v-if="display_region" class="collapsible" id="collapse-region">
       <form>
         <div v-for="region in regions">
           <input type="checkbox" :id="'region-' + region.toLowerCase()" :name="'region-' + region.toLowerCase()">
