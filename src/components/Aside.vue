@@ -36,8 +36,8 @@ function toggle_region(event) {
       Taxonomy
     </button>
     <div v-if="display_taxonomy" class="collapsible" id="collapse-taxonomy">
-      <form class="collapsible-form">
-        <div v-for="item in objectItems" class="checkbox-list">
+      <form>
+        <div v-for="item in objectItems">
           <input
             type="checkbox"
             :id="'taxonomy-' + item.toLowerCase()"
@@ -55,8 +55,8 @@ function toggle_region(event) {
       Region
     </button>
     <div v-if="display_region" class="collapsible" id="collapse-region">
-      <form class="collapsible-form">
-        <div v-for="region in regions" class="checkbox-list">
+      <form>
+        <div v-for="region in regions">
           <input
             type="checkbox"
             :id="'region-' + region.toLowerCase()"

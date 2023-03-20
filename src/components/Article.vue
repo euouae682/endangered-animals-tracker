@@ -4,9 +4,33 @@ import AnimalProfile from "./AnimalProfile.vue";
 
 <template>
   <div class="article">
-    <AnimalProfile class="animal-profile" />
-    <AnimalProfile class="animal-profile" />
-    <AnimalProfile class="animal-profile" />
+    <AnimalProfile 
+    class="animal-profile" 
+    commonName="Axolotl" 
+    scientificName="Ambystroma mexicanum" 
+    :threats="['Residential and commercial development', 'Pollution']" 
+    :habitat="['Wetlands', 'Artificial/Aquatic and Marine']"
+    :countries="['Mexico']"
+    status="Critically Endangered" />
+
+    <AnimalProfile 
+    class="animal-profile" 
+    commonName="Axolotl"  
+    scientificName="Ambystroma mexicanum" 
+    :threats="['Residential and commercial development', 'Pollution']" 
+    :habitat="['Wetlands', 'Artificial/Aquatic and Marine']"
+    :countries="['Mexico']"
+    status="Critically Endangered" />
+
+    <AnimalProfile 
+    class="animal-profile" 
+    commonName="Axolotl" 
+    scientificName="Ambystroma mexicanum" 
+    :threats="['Residential and commercial development', 'Pollution']" 
+    :habitat="['Wetlands', 'Artificial/Aquatic and Marine']"
+    :countries="['Mexico']"
+    status="Critically Endangered" />
+
   </div>
 </template>
 
