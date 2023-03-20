@@ -21,31 +21,29 @@ function toggleAdditional(event) {
 
     <div class="basic-information">
       <header class="animal-title">
-        <span class="common-name">Axolotl</span>
-        <span class="scientific-name">(Ambystoma mexicanum)</span>
+        <span class="common-name">{{ commonName }}</span>
+        <span class="scientific-name">({{ scientificName }})</span>
       </header>
 
       <div class="more-information">
         <div class="info-box threats">
           <h3>Threats</h3>
-          <ul>
-            <li>Residential & commercial development</li>
-            <li>Pollution</li>
+          <ul v-for="threat in threats">
+            <li>{{ threat }}</li>
           </ul>
         </div>
 
         <div class="info-box habitat">
           <h3>Habitat</h3>
-          <ul>
-            <li>Wetlands</li>
-            <li>Artificial/Aquatic & Marine</li>
+          <ul v-for="type in habitat">
+            <li>{{ type }}</li>
           </ul>
         </div>
 
         <div class="info-box countries">
           <h3>Countries</h3>
-          <ul>
-            <li>Mexico</li>
+          <ul v-for="country in countries">
+            <li>{{ country }}</li>
           </ul>
         </div>
       </div>
@@ -57,7 +55,7 @@ function toggleAdditional(event) {
       </div>
     </div>
 
-    <div class="status">Critically Endangered</div>
+    <div class="status">{{  status }}</div>
   </div>
 </template>
 
