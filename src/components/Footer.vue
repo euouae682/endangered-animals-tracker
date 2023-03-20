@@ -8,7 +8,7 @@
 
 <style scoped>
 .copyright {
-  background-color: #eee;
+  background-color: #ddd;
   padding-left: 5px;
 }
 </style>
