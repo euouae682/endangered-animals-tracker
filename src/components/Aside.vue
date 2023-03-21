@@ -10,9 +10,27 @@ const regions = [
   "Oceania",
   "South America",
 ];
+const habitats = [
+  "Forest",
+  "Savanna",
+  "Shrubland",
+  "Grassland",
+  "Wetlands",
+  "Rocky Areas",
+  "Caves & Subterranean Habitats",
+  "Desert",
+  "Marine Neritic",
+  "Marine Oceanic",
+  "Marine Deep Ocean Floor",
+  "Marine Intertidal",
+  "Marine Coastal",
+  "Artificial - Terrestrial",
+  "Artificial - Aquatic"
+]
 
 const display_taxonomy = ref(true);
 const display_region = ref(true);
+const display_habitat = ref(true);
 
 function toggle_taxonomy(event) {
   display_taxonomy.value = !display_taxonomy.value;
@@ -20,6 +38,10 @@ function toggle_taxonomy(event) {
 
 function toggle_region(event) {
   display_region.value = !display_region.value;
+}
+
+function toggle_habitat(event) {
+  display_habitat.value = !display_habitat.value;
 }
 </script>
 
@@ -69,7 +91,23 @@ function toggle_region(event) {
 
     <div class="line"></div>
 
-    <button type="button" class="collapsible-button">Habitat</button>
+    <button @click="toggle_habitat" type="button" class="collapsible-button">
+      Habitat
+    </button>
+    <div v-if="display_habitat" class="collapsible" id="collapse-region">
+      <form>
+        <div v-for="habitat in habitats" class="checkbox-list">
+          <input
+            type="checkbox"
+            :id="'habitat-' + habitat.toLowerCase()"
+            :name="'habitat-' + habitat.toLowerCase()"
+          />
+          <label :for="'habitat-' + habitat.toLowerCase()"> {{ habitat }} </label>
+        </div>
+      </form>
+    </div>
+
+    <div class="line"></div>
   </div>
 </template>
 
@@ -95,6 +133,8 @@ function toggle_region(event) {
 
   align-self: stretch;
   margin: 0 3%;
+
+  cursor: pointer;
 }
 
 .collapsible-button:hover {
