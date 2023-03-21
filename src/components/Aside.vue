@@ -25,8 +25,8 @@ const habitats = [
   "Marine Intertidal",
   "Marine Coastal",
   "Artificial - Terrestrial",
-  "Artificial - Aquatic"
-]
+  "Artificial - Aquatic",
+];
 
 const display_taxonomy = ref(true);
 const display_region = ref(true);
@@ -102,12 +102,12 @@ function toggle_habitat(event) {
             :id="'habitat-' + habitat.toLowerCase()"
             :name="'habitat-' + habitat.toLowerCase()"
           />
-          <label :for="'habitat-' + habitat.toLowerCase()"> {{ habitat }} </label>
+          <label :for="'habitat-' + habitat.toLowerCase()">
+            {{ habitat }}
+          </label>
         </div>
       </form>
     </div>
-
-    <div class="line"></div>
   </div>
 </template>
 
@@ -121,6 +121,7 @@ function toggle_habitat(event) {
   flex-direction: column;
   align-items: center;
   padding-top: 20px;
+  padding-bottom: 20px;
 }
 
 /* COLLAPSIBLES */
