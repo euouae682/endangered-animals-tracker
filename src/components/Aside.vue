@@ -1,77 +1,113 @@
-<script setup></script>
+<script setup>
+import { ref } from "vue";
+const objectItems = ["Animal", "Plant", "Fungi"];
+const regions = [
+  "Africa",
+  "Antarctica",
+  "Asia",
+  "Europe",
+  "North America",
+  "Oceania",
+  "South America",
+];
+const habitats = [
+  "Forest",
+  "Savanna",
+  "Shrubland",
+  "Grassland",
+  "Wetlands",
+  "Rocky Areas",
+  "Caves & Subterranean Habitats",
+  "Desert",
+  "Marine Neritic",
+  "Marine Oceanic",
+  "Marine Deep Ocean Floor",
+  "Marine Intertidal",
+  "Marine Coastal",
+  "Artificial - Terrestrial",
+  "Artificial - Aquatic",
+];
+
+const display_taxonomy = ref(true);
+const display_region = ref(true);
+const display_habitat = ref(true);
+
+function toggle_taxonomy(event) {
+  display_taxonomy.value = !display_taxonomy.value;
+}
+
+function toggle_region(event) {
+  display_region.value = !display_region.value;
+}
+
+function toggle_habitat(event) {
+  display_habitat.value = !display_habitat.value;
+}
+</script>
 
 <template>
   <div class="container">
-    <input type="text" class="search-bar" placeholder="Search..." />
+    <div class="search">
+      <img src="../assets/search-icon.png" alt="Logo" width="20" height="20" />
+      <input type="text" class="search-bar" placeholder="Search..." />
+    </div>
 
     <div class="line"></div>
 
-    <button type="button" class="collapsible-button">Taxonomy</button>
-    <div class="collapsible">
-      <!-- <form>
-        <input type="checkbox" v-for="item in objectItems" id={{ item }} />a
-        <label v-for="item in objectItems" for={{ item }}> {{ item }} <label />
-      </form> -->
-
+    <button @click="toggle_taxonomy" type="button" class="collapsible-button">
+      Taxonomy
+    </button>
+    <div v-if="display_taxonomy" class="collapsible" id="collapse-taxonomy">
       <form>
-        <input type="checkbox" id="taxonomy-animal" name="taxonomy-animal" />
-        <label for="taxonomy-animal">Animal</label><br />
-
-        <input type="checkbox" id="taxonomy-plant" name="taxonomy-plant" />
-        <label for="taxonomy-plant">Plant</label><br />
-
-        <input type="checkbox" id="taxonomy-fungi" name="taxonomy-fungi" />
-        <label for="taxonomy-fungi">Fungi</label><br />
+        <div v-for="item in objectItems" class="checkbox-list">
+          <input
+            type="checkbox"
+            :id="'taxonomy-' + item.toLowerCase()"
+            :name="'taxonomy-' + item.toLowerCase()"
+          />
+          <label :for="'taxonomy-' + item.toLowerCase()"> {{ item }} </label
+          ><br />
+        </div>
       </form>
     </div>
 
     <div class="line"></div>
 
-    <button type="button" class="collapsible-button">Region</button>
-    <div class="collapsible">
+    <button @click="toggle_region" type="button" class="collapsible-button">
+      Region
+    </button>
+    <div v-if="display_region" class="collapsible" id="collapse-region">
       <form>
-        <input type="checkbox" id="region-africa" name="region-africa" />
-        <label for="region-africa">Africa</label><br />
-
-        <input
-          type="checkbox"
-          id="region-antarctica"
-          name="region-antarctica"
-        />
-        <label for="region-antarctica">Antarctica</label><br />
-
-        <input type="checkbox" id="region-asia" name="region-asia" />
-        <label for="region-asia">Asia</label><br />
-
-        <input type="checkbox" id="region-europe" name="region-europe" />
-        <label for="region-europe">Europe</label><br />
-
-        <input
-          type="checkbox"
-          id="region-north-america"
-          name="region-north-america"
-        />
-        <label for="region-north-america">North America</label><br />
-
-        <input type="checkbox" id="region-oceania" name="region-oceania" />
-        <label for="region-oceania">Oceania</label><br />
-
-        <input
-          type="checkbox"
-          id="region-south-america"
-          name="region-south-america"
-        />
-        <label for="region-south-america">South America</label><br />
+        <div v-for="region in regions" class="checkbox-list">
+          <input
+            type="checkbox"
+            :id="'region-' + region.toLowerCase()"
+            :name="'region-' + region.toLowerCase()"
+          />
+          <label :for="'region-' + region.toLowerCase()"> {{ region }} </label>
+        </div>
       </form>
     </div>
 
     <div class="line"></div>
 
-    <button type="button" class="collapsible-button">Habitat</button>
-
-    <div class="line"></div>
-
-    <p>Advanced Search</p>
+    <button @click="toggle_habitat" type="button" class="collapsible-button">
+      Habitat
+    </button>
+    <div v-if="display_habitat" class="collapsible" id="collapse-region">
+      <form>
+        <div v-for="habitat in habitats" class="checkbox-list">
+          <input
+            type="checkbox"
+            :id="'habitat-' + habitat.toLowerCase()"
+            :name="'habitat-' + habitat.toLowerCase()"
+          />
+          <label :for="'habitat-' + habitat.toLowerCase()">
+            {{ habitat }}
+          </label>
+        </div>
+      </form>
+    </div>
   </div>
 </template>
 
@@ -79,24 +115,59 @@
 /* CONTAINER */
 .container {
   text-align: center;
-  background-color: rgba(255, 0, 0, 0.273);
+  background-color: #ddd;
 
-  padding: 20px 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 20px;
+  padding-bottom: 20px;
 }
 
 /* COLLAPSIBLES */
 .collapsible-button {
-  width: 95%;
+  font-size: 18px;
+
+  color: #fff;
+  background-color: #70c3ed;
+  border: 3px solid #78787880;
+
+  align-self: stretch;
+  margin: 0 3%;
+
+  cursor: pointer;
+}
+
+.collapsible-button:hover {
+  color: #000;
+  background-color: #ddd;
 }
 
 .collapsible {
   text-align: left;
+  align-self: flex-start;
+
   margin-left: 10%;
+}
+
+/* CHECKBOXES */
+.checkbox-list {
+  display: flex;
+  align-items: center;
+  margin-top: 5px;
+}
+
+input[type="checkbox"] {
+  background-color: #eee;
+
+  margin-right: 5px;
+  height: 15px;
+  width: 15px;
 }
 
 /* LINE */
 .line {
-  border-bottom: 5px solid hsla(0, 0%, 47%, 0.5);
+  border-bottom: 5px solid #78787880;
   border-radius: 20px;
 
   margin: 20px auto 0;
@@ -104,9 +175,17 @@
 }
 
 /* SEARCH BAR */
+.search {
+  display: flex;
+}
+
 .search-bar {
   font-size: 20px;
 
+  background-color: #ddd;
   border: none;
+  border-bottom: 2px solid #333;
+
+  margin-left: 5px;
 }
 </style>

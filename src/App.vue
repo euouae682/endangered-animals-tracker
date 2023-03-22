@@ -8,7 +8,7 @@ import Footer from "./components/Footer.vue";
 <template>
   <Header class="header" />
 
-  <div class="container">
+  <div class="main-body">
     <Aside class="aside" />
     <Article class="article" />
   </div>
@@ -17,8 +17,16 @@ import Footer from "./components/Footer.vue";
 </template>
 
 <style scoped>
-/* LAYOUT */
+/* MAIN BODY */
+.main-body {
+  display: flex;
+}
+
 .aside {
-  width: 25%;
+  flex: 0 0 20%;
+}
+
+.article {
+  flex: 1;
 }
 </style>
