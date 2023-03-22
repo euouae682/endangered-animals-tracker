@@ -10,7 +10,6 @@ app = Flask(__name__)
 api = Api(app)
 CORS(app)
 
-
 async def main():
     bot = Chatbot(cookiePath='cookies.json')
     x = """

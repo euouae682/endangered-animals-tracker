@@ -3,6 +3,18 @@ import Header from "./components/Header.vue";
 import Aside from "./components/Aside.vue";
 import Article from "./components/Article.vue";
 import Footer from "./components/Footer.vue";
+
+const fetchItems = async (url) => {
+    const res = await fetch(url, {
+      'methods':'GET',
+      headers : {
+        'Content-Type':'application/json'
+      }
+    });
+    const data = await res.json();
+    console.log(data)
+    return data;
+  } 
 </script>
 
 <template>
