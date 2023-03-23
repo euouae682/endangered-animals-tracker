@@ -1,38 +1,23 @@
 <script setup>
 import AnimalProfile from "./AnimalProfile.vue";
+import { ref, defineProps } from 'vue'
+
+const props = defineProps(['species'])
 </script>
 
 <template>
   <div class="article">
-    <AnimalProfile
+    <AnimalProfile v-for="animal in species"
       class="animal-profile"
-      commonName="Axolotl"
-      scientificName="Ambystroma mexicanum"
-      :threats="['Residential and commercial development', 'Pollution']"
-      :habitat="['Wetlands', 'Artificial/Aquatic and Marine']"
-      :countries="['Mexico']"
-      status="Critically Endangered"
+      :commonName="animal[0]"
+      :scientificName="animal[1]"
+      :threats="animal[3]"
+      :habitat="animal[4]"
+      :countries="animal[5]"
+      :status="animal[2]"
+      :additional="animal[6]"
     />
-
-    <AnimalProfile
-      class="animal-profile"
-      commonName="Axolotl"
-      scientificName="Ambystroma mexicanum"
-      :threats="['Residential and commercial development', 'Pollution']"
-      :habitat="['Wetlands', 'Artificial/Aquatic and Marine']"
-      :countries="['Mexico']"
-      status="Critically Endangered"
-    />
-
-    <AnimalProfile
-      class="animal-profile"
-      commonName="Axolotl"
-      scientificName="Ambystroma mexicanum"
-      :threats="['Residential and commercial development', 'Pollution']"
-      :habitat="['Wetlands', 'Artificial/Aquatic and Marine']"
-      :countries="['Mexico']"
-      status="Critically Endangered"
-    />
+    <p>{{ species }}</p>
   </div>
 </template>
 

@@ -1,0 +1,7 @@
+Animal Name: Saiga
+Scientific Name: Saiga tatarica
+IUCN Conservation Status: Critically Endangered
+Habitats: Grassland
+Continents: Europe, Asia
+Countries: Russia, Kazakhstan
+Summary: The saiga is a medium-sized hoofed mammal that lives in herds in treeless steppe country. It has been greatly reduced by hunting and habitat destruction and now exists in locations in southwestern Russia and Kazakhstan.

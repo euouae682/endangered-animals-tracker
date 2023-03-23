@@ -1,0 +1,7 @@
+Animal Name: Alpine Ibex
+Scientific Name: Capra ibex
+IUCN Conservation Status: Least Concern
+Habitats: Rocky Areas (e.g., inland cliffs, mountain peaks)
+Continents: Europe
+Countries: Italy, Austria, France, Germany, Switzerland
+Summary: The Alpine ibex is a species of wild goat that lives in the mountains of the European Alps. It is a sexually dimorphic species: males are larger and carry longer, curved horns than females.

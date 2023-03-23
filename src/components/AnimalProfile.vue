@@ -1,7 +1,7 @@
 <script setup>
 import { ref, defineProps } from 'vue'
 
-const props = defineProps(['commonName', 'scientificName', 'threats', 'habitat', 'countries', 'status'])
+const props = defineProps(['commonName', 'scientificName', 'threats', 'habitat', 'countries', 'status', 'additional'])
 const displayAdditional = ref(false)
 
 function toggleAdditional(event) {
@@ -27,31 +27,34 @@ function toggleAdditional(event) {
 
       <div class="more-information">
         <div class="info-box threats">
-          <h3>Threats</h3>
-          <ul v-for="threat in threats">
+          <h3>Habitats</h3>
+          <p>{{  threats }}</p>
+          <!-- <ul v-for="threat in threats">
             <li>{{ threat }}</li>
-          </ul>
+          </ul> -->
         </div>
 
         <div class="info-box habitat">
-          <h3>Habitat</h3>
-          <ul v-for="type in habitat">
+          <h3>Continents</h3>
+          <p>{{  habitat }}</p>
+          <!-- <ul v-for="type in habitat">
             <li>{{ type }}</li>
-          </ul>
+          </ul> -->
         </div>
 
         <div class="info-box countries">
           <h3>Countries</h3>
-          <ul v-for="country in countries">
+          <p>{{  countries }}</p>
+          <!-- <ul v-for="country in countries">
             <li>{{ country }}</li>
-          </ul>
+          </ul> -->
         </div>
       </div>
 
       <p @click="toggleAdditional" class="additional-info">Additional Information</p>
       <div v-if="displayAdditional" class="additional">
         <hr>
-        <h1>Hi additional info here</h1>
+        <p>{{ additional }}</p>
       </div>
     </div>
 
@@ -154,5 +157,9 @@ hr {
   height: 200px;
   padding: 0 20px;
   margin-left: auto;
+}
+
+p {
+  font-size: 20px;
 }
 </style>
