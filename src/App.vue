@@ -46,6 +46,21 @@ const fetchItems = () => {
   species.push(readTextFile("../cache/Data/Antartica/Animal Name Antarctic hair grass.txt").split("\n"));
   species.push(readTextFile("../cache/Data/Antartica/Animal Name Antarctic springtail.txt").split("\n"));
   species.push(readTextFile("../cache/Data/Antartica/Animal Name Hoff Crab.txt").split("\n"));
+  species.push(readTextFile("../cache/Data/Asia/Animal Name Pangolin.txt").split("\n"));
+  species.push(readTextFile("../cache/Data/Asia/Animal Name Proboscis Monkey.txt").split("\n"));
+  species.push(readTextFile("../cache/Data/Asia/Animal Name Saola.txt").split("\n"));
+  species.push(readTextFile("../cache/Data/Europe/Animal Name Alpine Ibex.txt").split("\n"));
+  species.push(readTextFile("../cache/Data/Europe/Animal Name European Lynx.txt").split("\n"));
+  species.push(readTextFile("../cache/Data/Europe/Animal Name Saiga.txt").split("\n"));
+  species.push(readTextFile("../cache/Data/North America/Animal Name American Alligator.txt").split("\n"));
+  species.push(readTextFile("../cache/Data/North America/Animal Name Bison.txt").split("\n"));
+  species.push(readTextFile("../cache/Data/North America/Animal Name Jaguar.txt").split("\n"));
+  species.push(readTextFile("../cache/Data/Oceania/Animal Name Fitzroy River turtle.txt").split("\n"));
+  species.push(readTextFile("../cache/Data/Oceania/Animal Name Numbat.txt").split("\n"));
+  species.push(readTextFile("../cache/Data/Oceania/Animal Name Thorny devil.txt").split("\n"));
+  species.push(readTextFile("../cache/Data/South America/Animal Name Black Caiman.txt").split("\n"));
+  species.push(readTextFile("../cache/Data/South America/Animal Name Guanaco.txt").split("\n"));
+  species.push(readTextFile("../cache/Data/South America/Animal Name Maned Wolf.txt").split("\n"));
 }
 
 fetchItems();

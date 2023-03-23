@@ -1,7 +1,7 @@
-Animal Name: European Lynx 
-Scientific Name: Lynx lynx 
-IUCN Conservation Status: Least Concern 
-Habitats: Forest
-Continents: Europe, Asia
-Countries: Switzerland, France, Italy, Czech Republic 
-Summary: The European Lynx is a unique wildcat that inhabits Switzerland, France, Italy, and the Czech Republic. It has a short tail and brown fur with spots. You will find this wild cat a fascinating breed of a domestic cat
+European Lynx 
+Lynx lynx 
+Least Concern
+Forest
+Europe, Asia
+Switzerland, France, Italy, Czech Republic 
+The European Lynx is a unique wildcat that inhabits Switzerland, France, Italy, and the Czech Republic. It has a short tail and brown fur with spots. You will find this wild cat a fascinating breed of a domestic cat

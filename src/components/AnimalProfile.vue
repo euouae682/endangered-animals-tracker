@@ -3,6 +3,15 @@ import { ref, defineProps } from 'vue'
 
 const props = defineProps(['commonName', 'scientificName', 'threats', 'habitat', 'countries', 'status', 'additional'])
 const displayAdditional = ref(false)
+const status_colors = {
+  "Least Concern\r": "green",
+  "Vulnerable\r": "blue",
+  "Near Threatened\r": "rgb(181, 175, 0)",
+  "Threatened\r": "rgb(181, 91, 0)",
+  "Endangered\r": "red",
+  "Critically Endangered\r": "black",
+  "Unknown\r": "gray"
+}
 
 function toggleAdditional(event) {
   displayAdditional.value = !displayAdditional.value
@@ -58,7 +67,7 @@ function toggleAdditional(event) {
       </div>
     </div>
 
-    <div class="status">{{  status }}</div>
+    <div :style="'background-color: ' + status_colors[status]" class="status">{{  status }}</div>
   </div>
 </template>
 
@@ -160,6 +169,6 @@ hr {
 }
 
 p {
-  font-size: 20px;
+  font-size: 16px;
 }
 </style>

@@ -1,6 +1,7 @@
-Animal Name: American Alligator
-Scientific Name: Alligator mississippiensis
-IUCN Conservation Status: Least Concern 
-Habitats: Freshwater habitats in the southeastern United States 
-Countries: United States 
-Summary: The American alligator is a reptile that can reach up to 13 feet in length and weigh nearly 500 pounds. They are opportunistic predators that feed on a variety of prey items, including fish, turtles, snakes, mammals, and birds.
+American Alligator
+Alligator mississippiensis
+Least Concern
+Freshwater habitats in the southeastern United States 
+North America
+United States 
+The American alligator is a reptile that can reach up to 13 feet in length and weigh nearly 500 pounds. They are opportunistic predators that feed on a variety of prey items, including fish, turtles, snakes, mammals, and birds.

@@ -1,7 +1,7 @@
-Animal Name: Proboscis Monkey
-Scientific Name: Nasalis larvatus
-IUCN Conservation Status: Endangered
-Habitats: Forest, Wetlands
-Continents: Asia 
-Countries: Borneo
-Summary: The proboscis monkey is an arboreal Old World monkey with an unusually large nose, a reddish-brown skin color and a long tail. It is endemic to the southeast Asian island of Borneo and is found mostly in mangrove forests and on the coastal areas of the island. They live in organized harem groups consisting of a dominant male and two to seven females and their offspring 1. Unfortunately, habitat destruction has caused a decline in the population of this species.
+Proboscis Monkey
+Nasalis larvatus
+Endangered
+Forest, Wetlands
+Asia 
+Borneo
+The proboscis monkey is an arboreal Old World monkey with an unusually large nose, a reddish-brown skin color and a long tail. It is endemic to the southeast Asian island of Borneo and is found mostly in mangrove forests and on the coastal areas of the island. They live in organized harem groups consisting of a dominant male and two to seven females and their offspring 1. Unfortunately, habitat destruction has caused a decline in the population of this species.

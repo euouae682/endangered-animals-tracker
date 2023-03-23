@@ -1,6 +1,7 @@
-Animal Name: Maned Wolf 
-Scientific Name: Chrysocyon brachyurus 
-IUCN Conservation Status: Near Threatened 
-Habitats: Grasslands with scattered bushes and trees 
-Countries: Argentina, Brazil, Bolivia, Peru, Paraguay 
-Summary: The maned wolf is a large canine of South America. It is found in Argentina, Brazil, Bolivia, Peru, and Paraguay. Its markings resemble those of foxes but it is neither a fox nor a wolf. It is the only species in the genus Chrysocyon (meaning “golden dog”).
+Maned Wolf 
+Chrysocyon brachyurus 
+Near Threatened
+Grasslands with scattered bushes and trees 
+South America
+Argentina, Brazil, Bolivia, Peru, Paraguay 
+The maned wolf is a large canine of South America. It is found in Argentina, Brazil, Bolivia, Peru, and Paraguay. Its markings resemble those of foxes but it is neither a fox nor a wolf. It is the only species in the genus Chrysocyon (meaning “golden dog”).

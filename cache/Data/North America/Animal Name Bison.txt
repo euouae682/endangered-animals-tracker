@@ -1,6 +1,7 @@
-Animal Name: American Bison 
-Scientific Name: Bison bison 
-IUCN Conservation Status: Near Threatened
-Habitats: Open grasslands and woodlands 
-Countries: United States 
-Summary: The American Bison is a species that is native to North America. They are a part of the bovine family, which also includes cattle and goats. There were once millions of them across the continent, but their populations have declined drastically in recent years2.
+American Bison 
+Bison bison 
+Near Threatened
+Open grasslands and woodlands
+North America
+United States 
+The American Bison is a species that is native to North America. They are a part of the bovine family, which also includes cattle and goats. There were once millions of them across the continent, but their populations have declined drastically in recent years2.

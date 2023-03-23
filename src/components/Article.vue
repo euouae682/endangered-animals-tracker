@@ -17,7 +17,6 @@ const props = defineProps(['species'])
       :status="animal[2]"
       :additional="animal[6]"
     />
-    <p>{{ species }}</p>
   </div>
 </template>
 

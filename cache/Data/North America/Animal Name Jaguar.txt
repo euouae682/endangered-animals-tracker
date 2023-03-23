@@ -1,6 +1,7 @@
-Animal Name: Jaguar
-Scientific Name: Panthera onca
-Conservation Status: Near Threatened
-Habitats: Forests, Grasslands
-Countries: Mexico to Argentina across 18 countries
-Summary: The jaguar is a large cat species and the only living member of the genus Panthera native to the Americas. It is the largest cat species in the Americas and the third largest in the world. Jaguars are strictly carnivorous and are considered opportunistic hunters, meaning they will prey on almost any animal that crosses their path. Their habitats include wet and dry forests, savannahs, and shrublands.
+Jaguar
+Panthera onca
+Near Threatened
+Forests, Grasslands
+North America
+Mexico to Argentina across 18 countries
+The jaguar is a large cat species and the only living member of the genus Panthera native to the Americas. It is the largest cat species in the Americas and the third largest in the world. Jaguars are strictly carnivorous and are considered opportunistic hunters, meaning they will prey on almost any animal that crosses their path. Their habitats include wet and dry forests, savannahs, and shrublands.

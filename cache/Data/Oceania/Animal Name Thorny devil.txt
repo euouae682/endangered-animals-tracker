@@ -1,7 +1,7 @@
-Animal Name: Thorny devil
-Scientific Name: Moloch horridus
-IUCN Conservation Status: Least Concern
-Habitats: Desert
-Continents: Oceania
-Countries: Australia 
-Summary: The thorny devil (Moloch horridus), also known commonly as the mountain devil, thorny lizard, thorny dragon, and moloch, is a species of lizard in the family Agamidae. The species is endemic to Australia. It is the sole species in the genus Moloch. The thorny devil grows up to 21 cm (8.3 in) in total length (including tail), and can live for 15 to 20 years. The females are larger than the males. Most specimens are coloured in camouflaging shades of desert browns and tans.
+Thorny devil
+Moloch horridus
+Least Concern
+Desert
+Oceania
+Australia 
+The thorny devil (Moloch horridus), also known commonly as the mountain devil, thorny lizard, thorny dragon, and moloch, is a species of lizard in the family Agamidae. The species is endemic to Australia. It is the sole species in the genus Moloch. The thorny devil grows up to 21 cm (8.3 in) in total length (including tail), and can live for 15 to 20 years. The females are larger than the males. Most specimens are coloured in camouflaging shades of desert browns and tans.
