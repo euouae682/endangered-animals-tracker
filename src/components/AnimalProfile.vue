@@ -21,7 +21,7 @@ function toggleAdditional(event) {
 <template>
   <div class="animal-box">
     <img
-      src="../assets/demo-axolotl.jpg"
+      :src="'../assets/' + commonName.substring(0, commonName.length - 2)"
       alt="Logo"
       width="200"
       height="200"
