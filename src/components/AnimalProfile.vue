@@ -123,7 +123,6 @@ function toggleAdditional(event) {
 .common-name {
   font-size: 24px;
   font-weight: bold;
-  margin-right: 10px;
 }
 
 .scientific-name {
