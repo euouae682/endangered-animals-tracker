@@ -61,8 +61,10 @@ function toggleAdditional(event) {
     </div>
 
     <div class="status">{{ status }}</div>
+
     <div v-if="displayAdditional" class="additional">
-      <h1>Hi additional info here</h1>
+      <h3>Summary</h3>
+      <p>{{ summary }}</p>
     </div>
   </div>
 </template>
@@ -75,7 +77,7 @@ function toggleAdditional(event) {
   border-radius: 5px;
 
   display: grid;
-  grid-template-columns: 200px 5fr 1fr;
+  grid-template-columns: 200px 1fr auto;
   grid-template-rows: 200px;
   column-gap: 10px;
   justify-content: center;
@@ -90,7 +92,7 @@ function toggleAdditional(event) {
 
 .additional {
   text-align: center;
-  grid-column: 1 / -1;
+  grid-column: 2 / 3;
 }
 
 /* IMAGE */
@@ -147,10 +149,6 @@ li {
   cursor: pointer;
 }
 
-hr {
-  width: 100%;
-}
-
 /* STATUS */
 .status {
   font-size: 20px;
@@ -163,8 +161,6 @@ hr {
   /* background-color: #f0bd27;
   background-color: #51b364; */
 
-  height: 200px;
   padding: 0 20px;
-  margin-left: auto;
 }
 </style>
