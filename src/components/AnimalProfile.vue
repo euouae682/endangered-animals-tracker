@@ -1,11 +1,18 @@
 <script setup>
-import { ref, defineProps } from 'vue'
+import { ref, defineProps } from "vue";
 
-const props = defineProps(['commonName', 'scientificName', 'threats', 'habitat', 'countries', 'status'])
-const displayAdditional = ref(false)
+const props = defineProps([
+  "commonName",
+  "scientificName",
+  "threats",
+  "habitat",
+  "countries",
+  "status",
+]);
+const displayAdditional = ref(false);
 
 function toggleAdditional(event) {
-  displayAdditional.value = !displayAdditional.value
+  displayAdditional.value = !displayAdditional.value;
 }
 </script>
 
@@ -48,14 +55,15 @@ function toggleAdditional(event) {
         </div>
       </div>
 
-      <p @click="toggleAdditional" class="additional-info">Additional Information</p>
-      <div v-if="displayAdditional" class="additional">
-        <hr>
-        <h1>Hi additional info here</h1>
-      </div>
+      <p @click="toggleAdditional" class="additional-info">
+        Additional Information
+      </p>
     </div>
 
-    <div class="status">{{  status }}</div>
+    <div class="status">{{ status }}</div>
+    <div v-if="displayAdditional" class="additional">
+      <h1>Hi additional info here</h1>
+    </div>
   </div>
 </template>
 
@@ -66,15 +74,23 @@ function toggleAdditional(event) {
   border: 2px solid #000;
   border-radius: 5px;
 
-  display: flex;
+  display: grid;
+  grid-template-columns: 200px 5fr 1fr;
+  grid-template-rows: 200px;
+  column-gap: 10px;
   justify-content: center;
+  align-content: center;
 }
 
 .basic-information {
   display: flex;
   flex-direction: column;
-  flex: 1 0 0;
-  gap: 20px;
+  justify-content: space-around;
+}
+
+.additional {
+  text-align: center;
+  grid-column: 1 / -1;
 }
 
 /* IMAGE */
@@ -133,10 +149,6 @@ li {
 
 hr {
   width: 100%;
-}
-
-.additional {
-  text-align: center;
 }
 
 /* STATUS */
