@@ -10,10 +10,11 @@ app = Flask(__name__)
 api = Api(app)
 CORS(app)
 
-async def main():
+
+async def main(animalname):
     bot = Chatbot(cookiePath='cookies.json')
-    promptAnimal = """
-    Tell me information without including any other irrelevant text for the Pacific Sleeper Shark in the following format. For the habitats choose them from these categories only: ([Forest, Savanna, Shrubland, Grassland, Wetlands, Rocky Areas (e.g., inland cliffs, mountain peaks), Caves & Subterranean Habitats (non-aquatic), Desert, Marine Neritic, Marine Oceanic, Marine Deep Ocean Floor (Benthic and Demersal), Marine Intertidal, Marine Coastal/Supratidal, Artificial-Terrestrial, Artificial-Aquatic, Unknown]) 
+    promptAnimal = f"""
+    Tell me information without including any other irrelevant text for the {animalname} in the following format. For the habitats choose them from these categories only: ([Forest, Savanna, Shrubland, Grassland, Wetlands, Rocky Areas (e.g., inland cliffs, mountain peaks), Caves & Subterranean Habitats (non-aquatic), Desert, Marine Neritic, Marine Oceanic, Marine Deep Ocean Floor (Benthic and Demersal), Marine Intertidal, Marine Coastal/Supratidal, Artificial-Terrestrial, Artificial-Aquatic, Unknown]) 
 
     Format:
     Animal Name:
@@ -43,11 +44,8 @@ class Animal(Resource):
 
     # Send Back Recipe Response
     def get(self, animalname):
-        return asyncio.run(main())
+        return asyncio.run(main(animalname))
         
-    
-    
-
 
 # Add Resource To Path
 api.add_resource(Animal, "/<string:animalname>")
