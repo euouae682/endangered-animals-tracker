@@ -1,8 +1,16 @@
 <script setup>
-import { ref, defineProps } from 'vue'
+import { ref, defineProps } from "vue";
 
-const props = defineProps(['commonName', 'scientificName', 'threats', 'habitat', 'countries', 'status', 'additional'])
-const displayAdditional = ref(false)
+const props = defineProps([
+  "commonName",
+  "scientificName",
+  "threats",
+  "habitat",
+  "countries",
+  "status",
+  "additional",
+]);
+const displayAdditional = ref(false);
 const status_colors = {
   "Least Concern\r": "green",
   "Vulnerable\r": "blue",
@@ -10,11 +18,11 @@ const status_colors = {
   "Threatened\r": "rgb(181, 91, 0)",
   "Endangered\r": "red",
   "Critically Endangered\r": "black",
-  "Unknown\r": "gray"
-}
+  "Unknown\r": "gray",
+};
 
 function toggleAdditional(event) {
-  displayAdditional.value = !displayAdditional.value
+  displayAdditional.value = !displayAdditional.value;
 }
 </script>
 
@@ -29,45 +37,52 @@ function toggleAdditional(event) {
     />
 
     <div class="basic-information">
-      <header class="animal-title">
-        <span class="common-name">{{ commonName }}</span>
-        <span class="scientific-name">({{ scientificName }})</span>
-      </header>
+      <div>
+        <header class="animal-title">
+          <p class="common-name">{{ commonName }}</p>
+          <p class="scientific-name">{{ scientificName }}</p>
+        </header>
 
-      <div class="more-information">
-        <div class="info-box threats">
-          <h3>Habitats</h3>
-          <p>{{  threats }}</p>
-          <!-- <ul v-for="threat in threats">
+        <div class="more-information">
+          <div class="info-box threats">
+            <h3>Habitats</h3>
+            <p>{{ threats }}</p>
+            <!-- <ul v-for="threat in threats">
             <li>{{ threat }}</li>
           </ul> -->
-        </div>
+          </div>
 
-        <div class="info-box habitat">
-          <h3>Continents</h3>
-          <p>{{  habitat }}</p>
-          <!-- <ul v-for="type in habitat">
+          <div class="info-box habitat">
+            <h3>Continents</h3>
+            <p>{{ habitat }}</p>
+            <!-- <ul v-for="type in habitat">
             <li>{{ type }}</li>
           </ul> -->
-        </div>
+          </div>
 
-        <div class="info-box countries">
-          <h3>Countries</h3>
-          <p>{{  countries }}</p>
-          <!-- <ul v-for="country in countries">
+          <div class="info-box countries">
+            <h3>Countries</h3>
+            <p>{{ countries }}</p>
+            <!-- <ul v-for="country in countries">
             <li>{{ country }}</li>
           </ul> -->
+          </div>
         </div>
       </div>
 
-      <p @click="toggleAdditional" class="additional-info">Additional Information</p>
-      <div v-if="displayAdditional" class="additional">
-        <hr>
-        <p>{{ additional }}</p>
-      </div>
+      <p @click="toggleAdditional" class="additional-info">
+        Additional Information
+      </p>
     </div>
 
-    <div :style="'background-color: ' + status_colors[status]" class="status">{{  status }}</div>
+    <div :style="'background-color: ' + status_colors[status]" class="status">
+      {{ status }}
+    </div>
+
+    <div v-if="displayAdditional" class="additional">
+      <h3>Summary</h3>
+      <p>{{ additional }}</p>
+    </div>
   </div>
 </template>
 
@@ -78,32 +93,41 @@ function toggleAdditional(event) {
   border: 2px solid #000;
   border-radius: 5px;
 
-  display: flex;
-  justify-content: center;
+  display: grid;
+  grid-template-columns: 200px 1fr auto;
+  grid-template-rows: 200px;
+  column-gap: 10px;
+  row-gap: 15px;
 }
 
 .basic-information {
   display: flex;
   flex-direction: column;
-  flex: 1 0 0;
-  gap: 20px;
+  justify-content: space-between;
+  margin-bottom: 5px;
 }
 
-/* IMAGE */
-.animal-image {
-  margin-right: 10px;
+.additional {
+  text-align: center;
+  justify-self: flex-end;
+  grid-column: 2 / 3;
 }
 
 /* ANIMAL TITLE */
 .animal-title {
-  font-size: 28px;
+  text-align: center;
   color: #70c3ed;
   margin-top: 5px;
 }
 
 .common-name {
+  font-size: 24px;
   font-weight: bold;
   margin-right: 10px;
+}
+
+.scientific-name {
+  color: gray;
 }
 
 /* INFORMATION */
@@ -143,32 +167,19 @@ li {
   cursor: pointer;
 }
 
-hr {
-  width: 100%;
-}
-
-.additional {
-  text-align: center;
-}
-
 /* STATUS */
 .status {
-  font-size: 20px;
+  font-size: 18px;
   text-align: center;
   writing-mode: vertical-rl;
-  word-spacing: 100vw;
 
   color: #fff;
   background-color: #e03531;
-  /* background-color: #f0bd27;
-  background-color: #51b364; */
-
-  height: 200px;
   padding: 0 20px;
-  margin-left: auto;
 }
 
 p {
   font-size: 16px;
+  text-align: center;
 }
 </style>
