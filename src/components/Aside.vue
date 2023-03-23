@@ -52,8 +52,6 @@ function toggle_habitat(event) {
       <input type="text" class="search-bar" placeholder="Search..." />
     </div>
 
-    <div class="line"></div>
-
     <button @click="toggle_taxonomy" type="button" class="collapsible-button">
       Taxonomy
     </button>
@@ -71,8 +69,6 @@ function toggle_habitat(event) {
       </form>
     </div>
 
-    <div class="line"></div>
-
     <button @click="toggle_region" type="button" class="collapsible-button">
       Region
     </button>
@@ -88,8 +84,6 @@ function toggle_habitat(event) {
         </div>
       </form>
     </div>
-
-    <div class="line"></div>
 
     <button @click="toggle_habitat" type="button" class="collapsible-button">
       Habitat
@@ -134,6 +128,7 @@ function toggle_habitat(event) {
 
   align-self: stretch;
   margin: 0 3%;
+  margin-top: 10px;
 
   cursor: pointer;
 }

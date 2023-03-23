@@ -147,6 +147,7 @@
 }
 
 .modalDialog > div {
+  font-size: 18px;
   background: #eee;
   border: 2px solid #000;
   border-radius: 10px;
